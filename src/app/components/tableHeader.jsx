@@ -38,7 +38,8 @@ const TableHeader = ({ onSort, selectedSort, columns }) => {
             scope="col"
           >
             {columns[column].name}
-            {renderSortArrow(selectedSort, columns[column].path)}
+            {columns[column].path &&
+              renderSortArrow(selectedSort, columns[column].path)}
           </th>
         ))}
       </tr>
